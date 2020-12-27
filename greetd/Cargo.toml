@@ -31,6 +31,6 @@ enquote = "1.0.3"
 extended-description = "greetd is a minimal and flexible login manager daemon that makes no assumptions about what you want to launch."
 provides = "x-display-manager"
 maintainer-scripts = "../"
-assets = [["../config.toml", "etc/", "644"], ["greetd", "usr/bin", "755"]]
+assets = [["../config.toml", "etc/greetd/", "644"], ["target/release/greetd", "usr/bin/", "755"]]
 conf-files = ["config.toml"]
 systemd-units = { restart-after-upgrade = true }
