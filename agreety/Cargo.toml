@@ -6,6 +6,7 @@ edition = "2018"
 license = "GPL-3.0"
 homepage = "https://kl.wtf/projects/agreety"
 repository = "https://git.sr.ht/~kennylevinsen/greetd/"
+description = "simple greeter for greetd"
 
 [dependencies]
 greetd_ipc = { path = "../greetd_ipc", features = ["sync-codec"]}
@@ -14,3 +15,6 @@ rpassword = "4.0"
 getopts = "0.2"
 enquote = "1.0.3"
 nix = "0.17"
+
+[package.metadata.deb]
+extended-description = "agreety is a simple greeter for greetd. greetd is a minimal and flexible login manager daemon that makes no assumptions about what you want to launch."

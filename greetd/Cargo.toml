@@ -6,6 +6,8 @@ edition = "2018"
 license = "GPL-3.0"
 homepage = "https://kl.wtf/projects/greetd"
 repository = "https://git.sr.ht/~kennylevinsen/greetd/"
+readme = "../README.md"
+description = "greetd is a minimal and flexible login manager daemon."
 
 [features]
 debug = []
@@ -24,3 +26,11 @@ getopts = "0.2"
 thiserror = "1.0"
 async-trait = "0.1"
 enquote = "1.0.3"
+
+[package.metadata.deb]
+extended-description = "greetd is a minimal and flexible login manager daemon that makes no assumptions about what you want to launch."
+provides = "x-display-manager"
+maintainer-scripts = "../"
+assets = [["../config.toml", "etc/", "644"], ["greetd", "usr/bin", "755"]]
+conf-files = ["config.toml"]
+systemd-units = { restart-after-upgrade = true }
